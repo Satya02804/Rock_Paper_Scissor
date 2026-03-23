@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - Premium Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center p-4">
+    <!-- Header -->
+    <header class="text-center mb-12 animate-bounce-in">
+        <h1 class="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 mb-2">
+            Rock Paper Scissors
+        </h1>
+        <p class="text-gray-400 text-lg uppercase tracking-widest">Premium Edition</p>
+    </header>
+
+    <!-- Score Board -->
+    <div class="glass rounded-3xl p-6 mb-12 flex space-x-12 px-12 animate-bounce-in" style="animation-delay: 0.1s">
+        <div class="text-center">
+            <span class="block text-gray-400 text-sm uppercase font-semibold">You</span>
+            <span id="player-score" class="text-4xl font-bold text-blue-400">0</span>
+        </div>
+        <div class="text-center flex items-center justify-center">
+            <span class="text-2xl font-bold text-gray-600">:</span>
+        </div>
+        <div class="text-center">
+            <span class="block text-gray-400 text-sm uppercase font-semibold">Computer</span>
+            <span id="cpu-score" class="text-4xl font-bold text-pink-500">0</span>
+        </div>
+    </div>
+
+    <!-- Game Status -->
+    <div id="game-status" class="mb-12 text-center h-16 flex items-center justify-center">
+        <p class="text-2xl font-semibold text-gray-300">Make your move!</p>
+    </div>
+
+    <!-- Choices -->
+    <main class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-4xl w-full">
+        <button id="rock" class="choice-btn glass rounded-3xl p-8 flex flex-col items-center group relative overflow-hidden" data-choice="r">
+            <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span class="text-6xl mb-4 group-hover:scale-110 transition-transform">🪨</span>
+            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-blue-400 transition-colors">Rock</span>
+        </button>
+        
+        <button id="paper" class="choice-btn glass rounded-3xl p-8 flex flex-col items-center group relative overflow-hidden" data-choice="p">
+            <div class="absolute inset-0 bg-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span class="text-6xl mb-4 group-hover:scale-110 transition-transform">📄</span>
+            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-purple-400 transition-colors">Paper</span>
+        </button>
+        
+        <button id="scissors" class="choice-btn glass rounded-3xl p-8 flex flex-col items-center group relative overflow-hidden" data-choice="s">
+            <div class="absolute inset-0 bg-pink-500/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+            <span class="text-6xl mb-4 group-hover:scale-110 transition-transform">✂️</span>
+            <span class="text-xl font-bold uppercase tracking-wider group-hover:text-pink-400 transition-colors">Scissors</span>
+        </button>
+    </main>
+
+    <!-- Results Display Area -->
+    <div id="result-overlay" class="hidden glass fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="text-center animate-bounce-in p-12 glass rounded-3xl max-w-md w-full mx-4">
+            <h2 id="result-title" class="text-4xl font-bold mb-4 uppercase italic"></h2>
+            <div class="flex justify-around items-center mb-8">
+                <div class="text-center">
+                    <p class="text-xs text-gray-400 uppercase mb-2">You</p>
+                    <div id="player-result-icon" class="text-5xl"></div>
+                </div>
+                <div class="text-2xl font-bold text-gray-500">VS</div>
+                <div class="text-center">
+                    <p class="text-xs text-gray-400 uppercase mb-2">CPU</p>
+                    <div id="cpu-result-icon" class="text-5xl"></div>
+                </div>
+            </div>
+            <p id="result-text" class="text-lg text-gray-300 mb-8"></p>
+            <button id="play-again" class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-10 rounded-full transition-all shadow-lg hover:shadow-blue-500/30">
+                Play Again
+            </button>
+        </div>
+    </div>
+
+   <!-- Footer -->
+   <!-- <footer class="mt-auto text-gray-500 text-sm opacity-50">
+        &copy; 2026 Rock Paper Scissors Premium. All rights reserved.
+    </footer> -->
+
+    <script src="script.js"></script>
+</body>
+</html>

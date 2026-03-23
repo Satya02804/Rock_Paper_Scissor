@@ -1,41 +1,37 @@
-### 📄 README.md
+# Rock Paper Scissors - Premium Edition 🎮
 
-```markdown
-# Rock Paper Scissors Game 🎮
-
-A simple command-line Rock-Paper-Scissors game built with Python.
+A modern, visually stunning Rock-Paper-Scissors game featuring a premium Web UI alongside the original Python CLI version.
 
 ## 📁 Project Structure
 
 ```
-
-rock\_paper\_scissor/
-│
-└── rock\_paper\_scissor.py
-
-````
+Rock_Paper_Scissor-master/
+├── index.html          # Main Web UI structure
+├── style.css           # Premium styles (Tailwind + Custom)
+├── script.js          # Web game logic & animations
+├── rock_paper_scissor.py # Original Python CLI version
+└── README.md           # Project documentation
+```
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Web Version (Recommended)
+Simply open `index.html` in any modern web browser to experience the premium interface.
+- **Features**: Glassmorphism design, real-time scoring, smooth animations, and responsive layout.
 
-- Python 3.x
-
-### How to Run
-
+### CLI Version
+To play the original text-based version:
 ```bash
 python rock_paper_scissor.py
-````
-
-Follow the prompts in the terminal to play the game against the computer.
+```
 
 ## 🧠 Features
-
-* User vs Computer gameplay
-* Randomized computer moves
-* Simple text-based interface
+* **Premium UI**: Dark-themed interface with glassmorphism effects.
+* **Real-time Scoring**: Track your wins against the computer.
+* **Interactive Gameplay**: Visual feedback and animations for every move.
+* **Dual-Platform**: Play in the terminal or in the browser.
 
 ## 🛠️ Built With
-
-* Python Standard Library (`random`, `input`)
-
+* **Frontend**: HTML5, Tailwind CSS, JavaScript (Vanilla ES6+).
+* **Backend logic**: Ported from the original Python implementation.
+* **Design**: Google Fonts (Outfit), Custom CSS animations.
